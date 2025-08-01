@@ -9,6 +9,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <!-- Минималистичный загрузочный экран -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <p class="loading-text">Loading...</p>
+        </div>
+    </div>
+
     <!-- Навигация -->
     <nav class="navbar">
         <div class="nav-container">
@@ -16,11 +24,19 @@
                 <span class="logo-text">yomo4.dev</span>
             </div>
             <div class="nav-menu" id="nav-menu">
-                <a href="#home" class="nav-link">Главная</a>
-                <a href="#about" class="nav-link">Обо мне</a>
-                <a href="#skills" class="nav-link">Навыки</a>
-                <a href="#portfolio" class="nav-link">Портфолио</a>
-                <a href="#contact" class="nav-link">Контакты</a>
+                <a href="#home" class="nav-link" data-en="Home" data-ru="Главная">Главная</a>
+                <a href="#about" class="nav-link" data-en="About" data-ru="Обо мне">Обо мне</a>
+                <a href="#skills" class="nav-link" data-en="Skills" data-ru="Навыки">Навыки</a>
+                <a href="#portfolio" class="nav-link" data-en="Portfolio" data-ru="Портфолио">Портфолио</a>
+                <a href="#contact" class="nav-link" data-en="Contact" data-ru="Контакты">Контакты</a>
+            </div>
+            <div class="nav-controls">
+                <button id="theme-toggle" class="control-btn" title="Toggle theme">
+                    <i class="fas fa-moon" id="theme-icon"></i>
+                </button>
+                <button id="lang-toggle" class="control-btn" title="Change language">
+                    <span id="lang-text">EN</span>
+                </button>
             </div>
             <div class="nav-toggle" id="nav-toggle">
                 <span class="bar"></span>
@@ -34,29 +50,58 @@
     <section id="home" class="hero">
         <div class="hero-container">
             <div class="hero-content">
-                <h1 class="hero-title">
-                    Привет, я <span class="text-gradient">yomo4</span>
+                <h1 class="hero-title" data-en="Hi, I'm <span class='highlight'>yomo4</span>" data-ru="Привет, я <span class='highlight'>yomo4</span>">
+                    Привет, я <span class="highlight">yomo4</span>
                 </h1>
-                <p class="hero-subtitle">
-                    Программист C/C++/C#/Python. Создаю инструменты и стили для улучшения пользовательского опыта
+                <p class="hero-subtitle" data-en="Programmer experienced in C/C++, C# and Python. I create functional solutions and improve user experience through quality code." data-ru="Программист с опытом в C/C++, C# и Python. Создаю функциональные решения и улучшаю пользовательский опыт через качественный код.">
+                    Программист с опытом в C/C++, C# и Python. Создаю функциональные решения и улучшаю пользовательский опыт через качественный код.
                 </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">4</span>
+                        <span class="stat-label" data-en="Projects" data-ru="Проекта">Проекта</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">3+</span>
+                        <span class="stat-label" data-en="Years experience" data-ru="Года опыта">Года опыта</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">6</span>
+                        <span class="stat-label" data-en="Technologies" data-ru="Технологий">Технологий</span>
+                    </div>
+                </div>
                 <div class="hero-buttons">
-                    <a href="#portfolio" class="btn btn-primary">Мои работы</a>
-                    <a href="#contact" class="btn btn-secondary">Связаться</a>
+                    <a href="#portfolio" class="btn btn-primary" data-en="My Works" data-ru="Мои работы">Мои работы</a>
+                    <a href="#contact" class="btn btn-secondary" data-en="Contact" data-ru="Связаться">Связаться</a>
                 </div>
             </div>
-            <div class="hero-image">
-                <div class="floating-card">
-                    <i class="fab fa-python"></i>
-                </div>
-                <div class="floating-card">
-                    <i class="fas fa-code"></i>
-                </div>
-                <div class="floating-card">
-                    <i class="fab fa-css3-alt"></i>
-                </div>
-                <div class="floating-card">
-                    <i class="fab fa-github"></i>
+            <div class="hero-visual">
+                <div class="hero-card">
+                    <div class="card-header">
+                        <div class="card-dots">
+                            <span></span><span></span><span></span>
+                        </div>
+                        <span class="card-title">yomo4.dev</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="code-line">
+                            <span class="code-keyword">const</span> 
+                            <span class="code-variable">developer</span> = {
+                        </div>
+                        <div class="code-line indent">
+                            <span class="code-property">name:</span> 
+                            <span class="code-string">'yomo4'</span>,
+                        </div>
+                        <div class="code-line indent">
+                            <span class="code-property">skills:</span> 
+                            <span class="code-array">['Python', 'C++', 'CSS']</span>,
+                        </div>
+                        <div class="code-line indent">
+                            <span class="code-property">location:</span> 
+                            <span class="code-string">'Texas, USA'</span>
+                        </div>
+                        <div class="code-line">}</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -69,8 +114,8 @@
     <section id="about" class="about">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Обо мне</h2>
-                <p class="section-subtitle">Узнайте больше о моем пути в разработке</p>
+                <h2 class="section-title" data-en="About Me" data-ru="Обо мне">Обо мне</h2>
+                <p class="section-subtitle" data-en="Learn more about my development journey" data-ru="Узнайте больше о моем пути в разработке">Узнайте больше о моем пути в разработке</p>
             </div>
             <div class="about-content">
                 <div class="about-text">
@@ -111,8 +156,8 @@
     <section id="skills" class="skills">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Мои навыки</h2>
-                <p class="section-subtitle">Технологии, с которыми я работаю</p>
+                <h2 class="section-title" data-en="My Skills" data-ru="Мои навыки">Мои навыки</h2>
+                <p class="section-subtitle" data-en="Technologies I work with" data-ru="Технологии, с которыми я работаю">Технологии, с которыми я работаю</p>
             </div>
             <div class="skills-grid">
                 <div class="skill-card">
@@ -183,8 +228,8 @@
     <section id="portfolio" class="portfolio">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Мои работы</h2>
-                <p class="section-subtitle">Некоторые из моих последних проектов</p>
+                <h2 class="section-title" data-en="My Works" data-ru="Мои работы">Мои работы</h2>
+                <p class="section-subtitle" data-en="Some of my recent projects" data-ru="Некоторые из моих последних проектов">Некоторые из моих последних проектов</p>
             </div>
             <div class="portfolio-grid">
                 <div class="portfolio-item">
@@ -290,8 +335,8 @@
     <section id="contact" class="contact">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Свяжитесь со мной</h2>
-                <p class="section-subtitle">Готов обсудить ваш следующий проект</p>
+                <h2 class="section-title" data-en="Get In Touch" data-ru="Свяжитесь со мной">Свяжитесь со мной</h2>
+                <p class="section-subtitle" data-en="Ready to discuss your next project" data-ru="Готов обсудить ваш следующий проект">Готов обсудить ваш следующий проект</p>
             </div>
             <div class="contact-content">
                 <div class="contact-info">
