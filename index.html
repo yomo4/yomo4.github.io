@@ -3,53 +3,370 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Портфолио [Ваше Имя]</title>
-    <link rel="stylesheet" href="style.css">
+    <title>yomo4 | Программист C/C++/C#/Python</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">yomo4.dev</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">Главная</a>
+                <a href="#about" class="nav-link">Обо мне</a>
+                <a href="#skills" class="nav-link">Навыки</a>
+                <a href="#portfolio" class="nav-link">Портфолио</a>
+                <a href="#contact" class="nav-link">Контакты</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
 
-    <header>
-        <h1>[Ваше Имя]</h1>
-        <p>Начинающий разработчик | Аналитик данных | Студент</p>
-    </header>
-
-    <main>
-        <section id="about">
-            <h2>Обо мне</h2>
-            <p>
-                Здесь вы можете написать краткий рассказ о себе, своих интересах в разработке,
-                технологиях, которые вы изучаете, и целях, которые перед собой ставите.
-            </p>
-        </section>
-
-        <section id="projects">
-            <h2>Мои проекты</h2>
-            <p>В статьях ниже я подробно рассказываю о своих самых интересных репозиториях.</p>
-
-            <article class="project-card">
-                <h3>Название первого проекта</h3>
-                <p>
-                    Краткое описание проекта. Расскажите, какую задачу он решает.
-                    Например: "Телеграм-бот, который присылает погоду по запросу пользователя".
+    <!-- Главная секция -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Привет, я <span class="text-gradient">yomo4</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Программист C/C++/C#/Python. Создаю инструменты и стили для улучшения пользовательского опыта
                 </p>
-                <a href="[ССЫЛКА_НА_ВАШ_РЕПОЗИТОРИЙ_1]" target="_blank">Посмотреть на GitHub</a>
-            </article>
+                <div class="hero-buttons">
+                    <a href="#portfolio" class="btn btn-primary">Мои работы</a>
+                    <a href="#contact" class="btn btn-secondary">Связаться</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="floating-card">
+                    <i class="fab fa-python"></i>
+                </div>
+                <div class="floating-card">
+                    <i class="fas fa-code"></i>
+                </div>
+                <div class="floating-card">
+                    <i class="fab fa-css3-alt"></i>
+                </div>
+                <div class="floating-card">
+                    <i class="fab fa-github"></i>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
 
-            <article class="project-card">
-                <h3>Название второго проекта</h3>
-                <p>
-                    Описание второго проекта. Например: "Скрипт для анализа данных о продажах,
-                    который строит наглядные графики".
-                </p>
-                <a href="[ССЫЛКА_НА_ВАШ_РЕПОЗИТОРИЙ_2]" target="_blank">Посмотреть на GitHub</a>
-            </article>
+    <!-- Обо мне -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Обо мне</h2>
+                <p class="section-subtitle">Узнайте больше о моем пути в разработке</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Программист с опытом в разных областях</h3>
+                    <p>
+                        Специализируюсь на создании инструментов и утилит с использованием C/C++, C# и Python. 
+                        Также разрабатываю стили и темы для улучшения пользовательского опыта в различных приложениях.
+                    </p>
+                    <p>
+                        Из Техаса, постоянно изучаю новые подходы в программировании, 
+                        создаю проекты от Discord ботов до кастомных тем для популярных сервисов.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h4>4</h4>
+                            <p>Проектов</p>
+                        </div>
+                        <div class="stat">
+                            <h4>3+</h4>
+                            <p>Года опыта</p>
+                        </div>
+                        <div class="stat">
+                            <h4>6</h4>
+                            <p>Технологий</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-code"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            </section>
-    </main>
+    <!-- Навыки -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Мои навыки</h2>
+                <p class="section-subtitle">Технологии, с которыми я работаю</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <h3>Python</h3>
+                    <p>Боты, автоматизация, скрипты, веб-разработка</p>
+                    <div class="skill-progress">
+                        <div class="progress-bar" data-width="85%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>C/C++</h3>
+                    <p>Системное программирование, алгоритмы, производительность</p>
+                    <div class="skill-progress">
+                        <div class="progress-bar" data-width="80%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-microsoft"></i>
+                    </div>
+                    <h3>C#</h3>
+                    <p>.NET приложения, десктопная разработка</p>
+                    <div class="skill-progress">
+                        <div class="progress-bar" data-width="75%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-css3-alt"></i>
+                    </div>
+                    <h3>CSS</h3>
+                    <p>Кастомные темы, стили, дизайн интерфейсов</p>
+                    <div class="skill-progress">
+                        <div class="progress-bar" data-width="90%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-git-alt"></i>
+                    </div>
+                    <h3>Git</h3>
+                    <p>Контроль версий, GitHub, совместная работа</p>
+                    <div class="skill-progress">
+                        <div class="progress-bar" data-width="85%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <h3>Web Tech</h3>
+                    <p>HTML, JavaScript, веб-интерфейсы</p>
+                    <div class="skill-progress">
+                        <div class="progress-bar" data-width="80%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <footer>
-        <p>© 2025 [Ваше Имя]. Создано с помощью GitHub Pages.</p>
+    <!-- Портфолио -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Мои работы</h2>
+                <p class="section-subtitle">Некоторые из моих последних проектов</p>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <div class="project-placeholder">
+                            <i class="fab fa-soundcloud"></i>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content">
+                                <h3>SoundCloud Dark Theme</h3>
+                                <p>Темная тема для SoundCloud с улучшенным интерфейсом</p>
+                                <div class="portfolio-tech">
+                                    <span>CSS</span>
+                                    <span>Dark Theme</span>
+                                    <span>UI/UX</span>
+                                </div>
+                                <div class="portfolio-links">
+                                    <a href="https://github.com/yomo4/soundcloud-dark-" class="portfolio-link">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <div class="project-placeholder">
+                            <i class="fab fa-discord"></i>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content">
+                                <h3>Discord Bot</h3>
+                                <p>Многофункциональный бот для Discord с различными командами</p>
+                                <div class="portfolio-tech">
+                                    <span>Python</span>
+                                    <span>Discord.py</span>
+                                    <span>API</span>
+                                </div>
+                                <div class="portfolio-links">
+                                    <a href="https://github.com/yomo4/discord-bot" class="portfolio-link">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <div class="project-placeholder">
+                            <i class="fab fa-discord"></i>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content">
+                                <h3>Discord Better Dark Theme</h3>
+                                <p>Улучшенная темная тема для Discord с кастомными стилями</p>
+                                <div class="portfolio-tech">
+                                    <span>CSS</span>
+                                    <span>BetterDiscord</span>
+                                    <span>Theme</span>
+                                </div>
+                                <div class="portfolio-links">
+                                    <a href="https://github.com/yomo4/theme-discord-better-all-dark-" class="portfolio-link">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content">
+                                <h3>Portfolio Website</h3>
+                                <p>Персональный сайт-портфолио на GitHub Pages</p>
+                                <div class="portfolio-tech">
+                                    <span>HTML</span>
+                                    <span>CSS</span>
+                                    <span>JavaScript</span>
+                                </div>
+                                <div class="portfolio-links">
+                                    <a href="https://yomo4.github.io" class="portfolio-link">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    <a href="https://github.com/yomo4/yomo4.github.io" class="portfolio-link">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Свяжитесь со мной</h2>
+                <p class="section-subtitle">Готов обсудить ваш следующий проект</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>GitHub</h3>
+                            <p>github.com/yomo4</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-telegram"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Telegram</h3>
+                            <p>@yomo4dev</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Локация</h3>
+                            <p>Texas, USA</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Специализация</h3>
+                            <p>C/C++/C#/Python</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Ваше имя" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Ваш email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Тема сообщения" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Ваше сообщение" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Отправить сообщение</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 yomo4. Все права защищены.</p>
+                <div class="social-links">
+                    <a href="https://github.com/yomo4"><i class="fab fa-github"></i></a>
+                    <a href="https://t.me/yomo4dev"><i class="fab fa-telegram"></i></a>
+                    <a href="https://yomo4.github.io"><i class="fas fa-globe"></i></a>
+                </div>
+            </div>
+        </div>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
